@@ -7,7 +7,7 @@ function App() {
   return (
     <Box className='flex flex-col items-center justify-between h-screen p-8'>
       <Logo className='h-32' />
-      <h1 className='font-light text-8xl'>{'< Site Under Construction />'}</h1>
+      <h1 className='font-light text-4xl  lg:text-8xl'>{'< Site Under Construction />'}</h1>
       <Box className='flex gap-4'>
         <ActionIcon
           component='a'
