@@ -70,7 +70,7 @@ export function Header() {
             }
             ${item.active && 'underline'}
           `}
-          component={item.href ? 'a' : 'div'}
+          component='a'
           target={item.href && item.openInNewWindow ? '_blank' : undefined}
           href={item.href}
         >
