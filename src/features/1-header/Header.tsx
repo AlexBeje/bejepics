@@ -18,7 +18,7 @@ export function Header() {
           {(styles) => (
             <div
               style={styles}
-              className='fixed top-0 left-0 w-full'
+              className='fixed top-0 left-0 w-full z-50'
               onClick={() => setOpened(() => !burgerOpened)}
             >
               <Box className='h-screen w-1/2 items-center justify-center flex flex-col  backdrop-blur-[3px] bg-white/90 shadow-gray-200 shadow-xl'>
