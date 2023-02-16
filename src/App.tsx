@@ -19,7 +19,7 @@ function App() {
         </ActionIcon>
         <ActionIcon
           component='a'
-          href='https://web.whatsapp.com/send/?phone=642954953'
+          href='https://wa.me/642954953'
           size={bottomIconsSize}
           target='_blank'
         >
