@@ -1,13 +1,16 @@
 import { Box, ActionIcon } from '@mantine/core';
 import { IconBrandInstagram, IconBrandWhatsapp } from '@tabler/icons';
-import { ReactComponent as Logo } from '/src/assets/ab-logo--dark.svg';
+import { Header } from './features/1-header/Header';
 
 function App() {
   const bottomIconsSize = 48;
+
   return (
-    <Box className='flex flex-col items-center justify-between h-screen pt-8 pb-2 lg:p-8'>
-      <Logo className='h-32' />
-      <h1 className='font-light text-4xl  lg:text-8xl'>{'< Site Under Construction />'}</h1>
+    <Box className='flex flex-col items-center justify-between h-screen pt-8 pb-2 lg:p-8 text-lg'>
+      <Header />
+      <h1 className='font-light text-4xl  lg:text-8xl'>
+        {'< Site Under Construction />'}
+      </h1>
       <Box className='flex gap-4'>
         <ActionIcon
           component='a'
@@ -16,14 +19,6 @@ function App() {
           target='_blank'
         >
           <IconBrandInstagram size={bottomIconsSize} color='black' />
-        </ActionIcon>
-        <ActionIcon
-          component='a'
-          href='https://wa.me/642954953'
-          size={bottomIconsSize}
-          target='_blank'
-        >
-          <IconBrandWhatsapp size={bottomIconsSize} color='black' />
         </ActionIcon>
       </Box>
     </Box>
