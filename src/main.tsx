@@ -7,7 +7,14 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider withCSSVariables withGlobalStyles withNormalizeCSS>
+    <MantineProvider
+      withCSSVariables
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        fontFamily: 'Teko, sans-serif',
+      }}
+    >
       <App />
     </MantineProvider>
   </React.StrictMode>
