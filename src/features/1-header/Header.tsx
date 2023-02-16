@@ -63,10 +63,11 @@ export function Header() {
       .map((item) => (
         <Box
           className={`
-            flex-1 font-extralight hover:cursor-pointer hover:text-gray-500 m-2 text-center
+            flex-1 font-extralight m-2 text-center
             ${
-              item.disabled &&
-              'hover:cursor-default hover:text-black hover:text-opacity-[0.10] text-black text-opacity-[0.10]'
+              item.disabled
+                ? 'text-black text-opacity-[0.10] hover:cursor-not-allowed'
+                : 'hover:cursor-pointer hover:text-gray-500'
             }
             ${item.active && 'underline'}
           `}
