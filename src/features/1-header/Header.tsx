@@ -12,7 +12,7 @@ export function Header() {
         <Transition
           mounted={burgerOpened}
           transition='slide-right'
-          duration={200}
+          duration={300}
           timingFunction='ease'
         >
           {(styles) => (
@@ -21,8 +21,8 @@ export function Header() {
               className='fixed top-0 left-0 w-full z-50'
               onClick={() => setOpened(() => !burgerOpened)}
             >
-              <Box className='h-screen w-1/2 items-center justify-center flex flex-col  backdrop-blur-[3px] bg-white/90 shadow-gray-200 shadow-xl'>
-                <Box className='flex flex-col text-4xl'>
+              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[3px] bg-white/90 shadow-gray-200 shadow-xl min-w-fit'>
+                <Box className='flex flex-col text-4xl '>
                   {renderMenuItem(1)}
                   {renderMenuItem(2)}
                   {renderMenuItem(3)}
@@ -35,6 +35,7 @@ export function Header() {
         <ActionIcon
           variant='transparent'
           onClick={() => setOpened(() => !burgerOpened)}
+          className='z-50'
         >
           <Burger
             opened={burgerOpened}
