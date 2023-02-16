@@ -4,6 +4,7 @@ export interface MenuItems {
   disabled: boolean;
   active: boolean;
   href?: string;
+  openInNewWindow?: boolean
   subMenuItems?: [
     {
       name: string;

@@ -2,24 +2,27 @@ import { MenuItems } from './Header.type';
 
 export const menuItems: MenuItems[] = [
   {
-    id: 1,
-    name: 'INICIO',
-    disabled: false,
-    active: true,
-  },
-  {
-    id: 2,
-    name: 'GALERIA',
     active: false,
     disabled: true,
+    id: 1,
+    name: 'GALERIA',
     subMenuItems: [{ name: 'BOOK' }],
   },
-  { id: 3, name: 'SERVICIOS', active: false, disabled: true },
+  { active: false, disabled: true, id: 2, name: 'SERVICIOS' },
   {
-    id: 4,
-    name: 'CONTACTO',
+    active: false,
+    disabled: false,
+    href: 'https://www.instagram.com/beje.pics/',
+    id: 3,
+    name: 'INSTAGRAM',
+    openInNewWindow: true,
+  },
+  {
     active: false,
     disabled: false,
     href: 'https://wa.me/642954953',
+    id: 4,
+    name: 'CONTACTO',
+    openInNewWindow: true,
   },
 ];

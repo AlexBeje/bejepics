@@ -9,15 +9,15 @@ export function Header() {
       .map((item) => (
         <Box
           className={`
-            flex-1 text-center m-2 hover:text-gray-500 hover:cursor-pointer font-extralight
+            flex-1 font-extralight hover:cursor-pointer hover:text-gray-500 m-2 text-center text-xl
             ${
               item.disabled &&
-              'text-black hover:text-black hover:text-opacity-[0.10] hover:cursor-default text-opacity-[0.10]'
+              'hover:cursor-default hover:text-black hover:text-opacity-[0.10] text-black text-opacity-[0.10]'
             }
             ${item.active && 'underline'}
           `}
           component={item.href ? 'a' : 'div'}
-          target={item.href && '_blank'}
+          target={item.href && item.openInNewWindow ? '_blank' : undefined}
           href={item.href}
         >
           {item.name}
@@ -26,7 +26,7 @@ export function Header() {
   };
 
   return (
-    <Box className='flex justify-between items-center w-full px-4 sm:max-w-xl'>
+    <Box className='flex items-center justify-between px-4 sm:max-w-xl w-full'>
       {renderMenuItem(1)}
       {renderMenuItem(2)}
       <Logo className='h-16 w-fit flex-1 m-2' />
