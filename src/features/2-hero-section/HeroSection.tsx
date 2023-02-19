@@ -14,11 +14,11 @@ export function HeroSection() {
       src='/src/assets/photos/IMG_7032--edited.jpg'
       className='flex flex-1 mb-4 overflow-hidden sm:hidden'
     >
-      <Box className='backdrop-blur-[10px] bg-black/30 mt-[300px] p-6 shadow-black shadow-xl text-white w-full'>
+      <Box className='backdrop-blur-[10px] bg-black/40 mt-[280px] p-6 shadow-black shadow-xl text-white w-full'>
         <Title order={1} className='font-extralight mb-6 text-6xl'>
           {heroSectionData.title}
         </Title>
-        <Box className='bg-black/30 flex mb-6 rounded-sm'>
+        <Box className='bg-black/60 flex mb-6 rounded-sm'>
           {heroSectionData.steps.map((step) => (
             <Center
               className='flex-1 flex-col p-4'
