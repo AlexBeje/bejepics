@@ -1,11 +1,13 @@
-import { Checkbox, Box } from '@mantine/core';
+import { Container, Box, Checkbox } from '@mantine/core';
 import { Header } from './features/1-header/Header';
+import { HeroSection } from './features/2-hero-section/HeroSection';
 
 function App() {
   return (
-    <Box className='flex flex-col items-center justify-between h-screen pt-8 pb-2 lg:p-8'>
+    <Container className='min-h-screen flex flex-col'>
       <Header />
-      <Box className='flex-1  font-extralight flex justify-center flex-col gap-4 sm:min-w-[600px]'>
+      <HeroSection />
+      <Box className='hidden sm:flex flex-1 font-extralight justify-center flex-col gap-4 sm:min-w-[600px]'>
         <h1 className='text-4xl lg:text-6xl mb-6 text-center'>
           {'< Website En Construcción />'}
         </h1>
@@ -22,7 +24,7 @@ function App() {
           checked={false}
         />
       </Box>
-    </Box>
+    </Container>
   );
 }
 

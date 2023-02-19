@@ -1,7 +1,9 @@
-import { Indicator, Transition, Burger, ActionIcon, Box } from '@mantine/core';
+import { useState } from 'react';
+
+import { Center, Transition, Burger, ActionIcon, Box } from '@mantine/core';
+
 import { menuItems } from './Header.data';
 import { ReactComponent as Logo } from '/src/assets/ab-logo--dark.svg';
-import { useState } from 'react';
 
 export function Header() {
   const [burgerOpened, setOpened] = useState(false);
@@ -16,12 +18,12 @@ export function Header() {
           timingFunction='ease'
         >
           {(styles) => (
-            <div
+            <Box
               style={styles}
               className='fixed top-0 left-0 w-full z-50'
               onClick={() => setOpened(() => !burgerOpened)}
             >
-              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[3px] bg-white/90 shadow-gray-200 shadow-xl min-w-fit'>
+              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[3px] bg-white/90 shadow-gray-900 drop-shadow-2xl min-w-fit'>
                 <Box className='flex flex-col text-4xl '>
                   {renderMenuItem(1)}
                   {renderMenuItem(2)}
@@ -29,7 +31,7 @@ export function Header() {
                   {renderMenuItem(4)}
                 </Box>
               </Box>
-            </div>
+            </Box>
           )}
         </Transition>
         <ActionIcon
@@ -82,18 +84,18 @@ export function Header() {
   };
 
   return (
-    <Box className='w-full sm:max-w-xl'>
-      <Box className='items-center justify-between px-4 flex sm:hidden'>
+    <Center className='w-full sm:max-w-xl m-auto'>
+      <Box className='items-center justify-between flex sm:hidden w-full'>
         {renderBurgerIcon()}
         {renderLogo()}
       </Box>
-      <Box className='items-center justify-between px-4 hidden sm:flex text-xl'>
+      <Box className='items-center justify-between hidden sm:flex text-xl w-full'>
         {renderMenuItem(1)}
         {renderMenuItem(2)}
         {renderLogo()}
         {renderMenuItem(3)}
         {renderMenuItem(4)}
       </Box>
-    </Box>
+    </Center>
   );
 }
