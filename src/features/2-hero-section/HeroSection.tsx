@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { heroSectionData } from './HeroSection.data';
 
 export function HeroSection() {
+  const imageUrl = new URL('./images/image1.jpg', import.meta.url)
+    .href;
+
   const [selectedStep, setSelectedStep] = useState(2);
 
   const getSelectedStepStyle = (stepId: number): string => {
@@ -11,7 +14,7 @@ export function HeroSection() {
 
   return (
     <BackgroundImage
-      src='/src/assets/photos/IMG_7032--edited.jpg'
+      src={imageUrl}
       className='flex flex-1 mb-4 overflow-hidden sm:hidden'
     >
       <Box className='backdrop-blur-[10px] bg-black/40 mt-[280px] p-6 shadow-black shadow-xl text-white w-full'>
