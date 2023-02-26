@@ -10,7 +10,7 @@ export function Header() {
 
   const renderBurgerIcon = () => {
     return (
-      <Box className='flex-1 sm:hidden p-8'>
+      <Box className='flex-1 sm:hidden p-6'>
         <Transition
           mounted={burgerOpened}
           transition='slide-right'
@@ -23,7 +23,7 @@ export function Header() {
               className='fixed top-0 left-0 w-full z-50'
               onClick={() => setOpened(() => !burgerOpened)}
             >
-              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[5px] bg-black/60 shadow-gray-900 drop-shadow-2xl min-w-fit'>
+              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[10px] bg-black/60 shadow-gray-900 drop-shadow-2xl min-w-fit'>
                 <Box className='flex flex-col'>
                   {renderMenuItem(1)}
                   {renderMenuItem(2)}
@@ -54,7 +54,7 @@ export function Header() {
       <Box
         component='a'
         href='https://www.bejepics.com/'
-        className='m-2 hover:cursor-pointer flex justify-end mx-8 w-fit'
+        className='m-2 hover:cursor-pointer flex justify-end mx-8 w-[64px]'
       >
         <Logo className='max-h-16 w-fit mr-0 lg:m-auto' />
       </Box>
@@ -85,7 +85,7 @@ export function Header() {
   };
 
   return (
-    <Box className='w-full bg-gradient-to-b from-black/80 p-6'>
+    <Box className='w-full'>
       <Center className='sm:max-w-xl m-auto'>
         <Box className='items-center justify-between flex sm:hidden w-full'>
           {renderBurgerIcon()}

@@ -46,6 +46,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         globalStyles: (theme) => ({
           body: {
             ...theme.fn.fontStyles(),
+            overflowX: 'hidden',
             p: {
               fontWeight: '200',
             },

@@ -29,11 +29,16 @@ export function HeroSection() {
   };
 
   return (
-    <Box className='backdrop-blur-[10px] m-auto ml-6 mr-6 bg-black/60 p-6 shadow-black/80 shadow-2xl text-white flex flex-col justify-center md:ml-auto md:w-1/2 md:max-w-[500px] md:mr-20 lg:p-20'>
-      <Title order={1} className='mb-6'>
-        {heroSectionData.title}
-      </Title>
-      <Box className='bg-black/80 flex mb-6 rounded-[4px]'>
+    <Box className='backdrop-blur-[10px] flex flex-col justify-center flex-1 bg-black/60 shadow-black/80 shadow-2xl text-white p-6 sm:ml-auto sm:w-1/2 sm:max-w-[500px] md:mr-10 md:p-10 lg:mr-20 lg:p-20'>
+      {heroSectionData.steps
+        .filter((step) => step.id === selectedStep)
+        .map((step) => (
+          <Title order={1} className='mb-6'>
+            {step.title}
+          </Title>
+        ))}
+
+      <Box className='bg-black/80 flex mb-6 rounded-[4px] h-[120px]'>
         {heroSectionData.steps.map((step) => (
           <Center
             className='flex-1 flex-col m-4 text-center cursor-pointer'
