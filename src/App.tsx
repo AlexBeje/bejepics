@@ -6,19 +6,17 @@ function App() {
   const imageUrl = new URL('./images/image1.jpg', import.meta.url).href;
 
   return (
-    <Box
-      style={{ backgroundImage: `url(${imageUrl})` }}
-      className='bg-left-top bg-cover'
-    >
-      <Box className='bg-black/40 backdrop-blur-[80px]'>
-        <Container size='xl' className='p-0'>
-          <Box
-            style={{ backgroundImage: `url(${imageUrl})` }}
-            className='bg-left-top bg-cover min-h-screen flex flex-col items-center'
-          >
-            <Header />
-            <HeroSection />
-          </Box>
+    <Box className='bg-black/40 backdrop-blur-[80px]'>
+      <Box
+        style={{ backgroundImage: `url(${imageUrl})` }}
+        className='bg-left bg-cover min-h-screen flex flex-col'
+      >
+        <Header />
+        <Container
+          size='xl'
+          className='flex flex-col items-center flex-1 w-full'
+        >
+          <HeroSection />
         </Container>
       </Box>
     </Box>

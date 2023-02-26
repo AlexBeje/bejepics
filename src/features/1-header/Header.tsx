@@ -85,7 +85,7 @@ export function Header() {
   };
 
   return (
-    <Box className='w-full bg-gradient-to-b from-black/50 p-6'>
+    <Box className='w-full bg-gradient-to-b from-black/80 p-6'>
       <Center className='sm:max-w-xl m-auto'>
         <Box className='items-center justify-between flex sm:hidden w-full'>
           {renderBurgerIcon()}

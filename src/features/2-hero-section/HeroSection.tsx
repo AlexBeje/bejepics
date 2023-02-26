@@ -29,7 +29,7 @@ export function HeroSection() {
   };
 
   return (
-    <Box className='backdrop-blur-[10px] m-auto ml-6 mr-6 bg-black/60 p-6 shadow-black/80 shadow-2xl text-white flex flex-col justify-center sm:ml-auto sm:w-1/2 sm:max-w-[400px] sm:mr-12'>
+    <Box className='backdrop-blur-[10px] m-auto ml-6 mr-6 bg-black/60 p-6 shadow-black/80 shadow-2xl text-white flex flex-col justify-center md:ml-auto md:w-1/2 md:max-w-[500px] md:mr-20 lg:p-20'>
       <Title order={1} className='mb-6'>
         {heroSectionData.title}
       </Title>
