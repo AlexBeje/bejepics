@@ -42,7 +42,7 @@ export function Header() {
           <Burger
             opened={burgerOpened}
             onClick={() => setOpened(() => !burgerOpened)}
-            color="white"
+            color='white'
           />
         </ActionIcon>
       </Box>
@@ -85,18 +85,20 @@ export function Header() {
   };
 
   return (
-    <Center className='w-full sm:max-w-xl m-auto absolute'>
-      <Box className='items-center justify-between flex sm:hidden w-full'>
-        {renderBurgerIcon()}
-        {renderLogo()}
-      </Box>
-      <Box className='items-center justify-between hidden sm:flex w-full'>
-        {renderMenuItem(1)}
-        {renderMenuItem(2)}
-        {renderLogo()}
-        {renderMenuItem(3)}
-        {renderMenuItem(4)}
-      </Box>
-    </Center>
+    <Box className='w-full bg-gradient-to-b from-black/50 p-6'>
+      <Center className='sm:max-w-xl m-auto'>
+        <Box className='items-center justify-between flex sm:hidden w-full'>
+          {renderBurgerIcon()}
+          {renderLogo()}
+        </Box>
+        <Box className='items-center justify-between hidden sm:flex w-full'>
+          {renderMenuItem(1)}
+          {renderMenuItem(2)}
+          {renderLogo()}
+          {renderMenuItem(3)}
+          {renderMenuItem(4)}
+        </Box>
+      </Center>
+    </Box>
   );
 }
