@@ -1,10 +1,9 @@
-import { BackgroundImage, Box, Center, Text, Title } from '@mantine/core';
+import { Box, Center, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import { heroSectionData } from './HeroSection.data';
 
 export function HeroSection() {
-  const imageUrl = new URL('./images/image1.jpg', import.meta.url)
-    .href;
+  const imageUrl = new URL('./images/image1.jpg', import.meta.url).href;
 
   const [selectedStep, setSelectedStep] = useState(2);
 
@@ -13,24 +12,28 @@ export function HeroSection() {
   };
 
   return (
-    <BackgroundImage
-      src={imageUrl}
-      className='flex flex-1 mb-4 overflow-hidden sm:hidden'
+    <Box
+      style={{ backgroundImage: `url(${imageUrl})` }}
+      className='flex flex-1 mb-4 overflow-hidden bg-left-top bg-cover'
     >
-      <Box className='backdrop-blur-[10px] bg-black/40 mt-[280px] p-6 shadow-black shadow-xl text-white w-full'>
-        <Title order={1} className='font-extralight mb-6 text-6xl'>
+      <Box className='backdrop-blur-[10px] bg-black/40 mt-[280px] p-6 shadow-black shadow-xl text-white sm:flex sm:flex-col sm:justify-center sm:ml-auto sm:mt-0 sm:w-1/2'>
+        <Title order={1} className='mb-6'>
           {heroSectionData.title}
         </Title>
         <Box className='bg-black/60 flex mb-6 rounded-sm'>
           {heroSectionData.steps.map((step) => (
             <Center
-              className='flex-1 flex-col p-4'
+              className='flex-1 flex-col p-4 text-center'
               onClick={() => setSelectedStep(step.id)}
             >
-              <Title className={getSelectedStepStyle(step.id)}>
-                0{step.id}
+              <Title
+                className={`cursor-pointer ${getSelectedStepStyle(step.id)}`}
+              >
+                {'0' + step.id}
               </Title>
-              <Text className={getSelectedStepStyle(step.id)}>
+              <Text
+                className={`cursor-pointer ${getSelectedStepStyle(step.id)}`}
+              >
                 {step.title}
               </Text>
             </Center>
@@ -41,13 +44,13 @@ export function HeroSection() {
           .map((step) => (
             <Box className='w-full'>
               <Title>{step.title}</Title>
-              <Text weight='bold' span>
-                {step.state}
-              </Text>
-              <Text span>{` - ${step.description}`}</Text>
+              <Text
+                span
+                dangerouslySetInnerHTML={{ __html: step.description }}
+              />
             </Box>
           ))}
       </Box>
-    </BackgroundImage>
+    </Box>
   );
 }

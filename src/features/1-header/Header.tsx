@@ -24,7 +24,7 @@ export function Header() {
               onClick={() => setOpened(() => !burgerOpened)}
             >
               <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[3px] bg-white/90 shadow-gray-900 drop-shadow-2xl min-w-fit'>
-                <Box className='flex flex-col text-4xl '>
+                <Box className='flex flex-col'>
                   {renderMenuItem(1)}
                   {renderMenuItem(2)}
                   {renderMenuItem(3)}
@@ -89,7 +89,7 @@ export function Header() {
         {renderBurgerIcon()}
         {renderLogo()}
       </Box>
-      <Box className='items-center justify-between hidden sm:flex text-xl w-full'>
+      <Box className='items-center justify-between hidden sm:flex w-full'>
         {renderMenuItem(1)}
         {renderMenuItem(2)}
         {renderLogo()}
