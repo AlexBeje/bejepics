@@ -18,23 +18,39 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           sizes: {
             h1: {
               fontSize: 48,
-              lineHeight: .9,
+              fontWeight: 700,
+              lineHeight: 1,
             },
             h2: {
-              fontSize: 20,
+              fontSize: 32,
+              fontWeight: 700,
+              lineHeight: 1,
             },
             h3: {
               fontSize: 20,
+              fontWeight: 200,
+              lineHeight: 1,
+            },
+            h4: {
+              fontSize: 18,
+              fontWeight: 200,
+              lineHeight: 1,
             },
           },
         },
         fontSizes: {
-          xs: 16,
-          sm: 18,
-          md: 20,
-          lg: 22,
-          xl: 24,
+          md: 22,
+          sm: 16,
         },
+        lineHeight: '24px',
+        globalStyles: (theme) => ({
+          body: {
+            ...theme.fn.fontStyles(),
+            p: {
+              fontWeight: '200',
+            },
+          },
+        }),
       }}
     >
       <App />

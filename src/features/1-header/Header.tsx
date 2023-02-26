@@ -14,7 +14,7 @@ export function Header() {
         <Transition
           mounted={burgerOpened}
           transition='slide-right'
-          duration={300}
+          duration={100}
           timingFunction='ease'
         >
           {(styles) => (
@@ -23,7 +23,7 @@ export function Header() {
               className='fixed top-0 left-0 w-full z-50'
               onClick={() => setOpened(() => !burgerOpened)}
             >
-              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[3px] bg-white/90 shadow-gray-900 drop-shadow-2xl min-w-fit'>
+              <Box className='h-screen w-1/2 items-center justify-center flex flex-col backdrop-blur-[5px] bg-black/60 shadow-gray-900 drop-shadow-2xl min-w-fit'>
                 <Box className='flex flex-col'>
                   {renderMenuItem(1)}
                   {renderMenuItem(2)}
@@ -42,6 +42,7 @@ export function Header() {
           <Burger
             opened={burgerOpened}
             onClick={() => setOpened(() => !burgerOpened)}
+            color="white"
           />
         </ActionIcon>
       </Box>
@@ -66,10 +67,10 @@ export function Header() {
       .map((item) => (
         <Box
           className={`
-            flex-1 font-extralight m-2 text-center
+            flex-1 font-extralight m-2 text-center text-white
             ${
               item.disabled
-                ? 'text-black text-opacity-[0.10] hover:cursor-not-allowed'
+                ? 'text-black text-opacity-[0.30] hover:cursor-not-allowed'
                 : 'hover:cursor-pointer hover:text-gray-500'
             }
             ${item.active && 'underline'}
@@ -84,7 +85,7 @@ export function Header() {
   };
 
   return (
-    <Center className='w-full sm:max-w-xl m-auto'>
+    <Center className='w-full sm:max-w-xl m-auto absolute'>
       <Box className='items-center justify-between flex sm:hidden w-full'>
         {renderBurgerIcon()}
         {renderLogo()}
