@@ -1,0 +1,15 @@
+:root {
+  @apply font-roboto font-thin;
+}
+
+html {
+  @apply bg-black overflow-hidden;
+}
+
+h2 {
+  @apply font-teko text-5xl;
+}
+
+h3 {
+  @apply font-teko text-3xl;
+}

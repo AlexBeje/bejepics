@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": 1,
+    "title": "Portrait & Book",
+    "subtitle": "Capturaré las mejores fotos para tu sesión de retratos y books, ya sea en interiores o exteriores, con la iluminación adecuada y la composición perfecta para resaltar tu belleza y personalidad.",
+    "link": "https://wa.me/642954953"
+  },
+  {
+    "id": 2,
+    "image": 2,
+    "title": "Kids & Family",
+    "subtitle": "En cada sesión de de niños y familia, inmortalizaré los momentos más hermosos con la iluminación adecuada y la composición perfecta para reflejar la esencia y la individualidad de cada persona. Garantizo que tus fotos serán únicas e inolvidables.",
+    "link": "https://wa.me/642954953"
+  },
+  {
+    "id": 3,
+    "image": 3,
+    "title": "Deportes",
+    "subtitle": "Tomaré las mejores fotos de tu evento o actividad deportiva, ya sea una boda, una fiesta de cumpleaños, un aniversario o cualquier otra celebración, así como competencias deportivas, entrenamientos y actividades al aire libre.",
+    "link": "https://wa.me/642954953"
+  },
+  {
+    "id": 4,
+    "image": 4,
+    "title": "Eventos",
+    "subtitle": "Versado en eventos deportivos y retratos, puedo asegurarte fotografías de alta calidad que reflejen tu estilo y personalidad. Estoy comprometido a hacer que cada sesión de fotos sea inolvidable para ti.",
+    "link": "https://wa.me/642954953"
+  },
+  {
+    "id": 5,
+    "image": 5,
+    "title": "Mascotas",
+    "subtitle": "Con mi experiencia en fotografía de mascotas, puedo capturar imágenes de alta calidad que reflejen la personalidad y el estilo de tu mascota. Me comprometo a hacer que cada sesión de fotos sea memorable para ti y para tu compañer@ pelud@.",
+    "link": "https://wa.me/642954953"
+  }
+]
