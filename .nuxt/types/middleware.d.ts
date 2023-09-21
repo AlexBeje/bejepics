@@ -1,6 +1,6 @@
 import type { NavigationGuard } from 'vue-router'
 export type MiddlewareKey = string
-declare module "/Users/alexandrubejenaru/Code/bejepics/node_modules/nuxt/dist/pages/runtime/composables" {
+declare module "/Users/alexbeje/Code/bejepics/node_modules/nuxt/dist/pages/runtime/composables" {
   interface PageMeta {
     middleware?: MiddlewareKey | NavigationGuard | Array<MiddlewareKey | NavigationGuard>
   }

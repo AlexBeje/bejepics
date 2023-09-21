@@ -1,5 +1,5 @@
 
-import { defuFn } from '/Users/alexandrubejenaru/Code/bejepics/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/Users/alexbeje/Code/bejepics/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

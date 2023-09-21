@@ -1,5 +1,7 @@
 <script setup lang="ts">
 onMounted(() => {
-  navigateTo({ path: "/home" });
+  // TODO: When site is ready to be published, redirect to home page
+  // navigateTo({ path: "/home" });
+  window.location.href = "https://www.instagram.com/beje.pics/";
 });
 </script>

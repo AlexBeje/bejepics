@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "/Users/alexandrubejenaru/Code/bejepics/node_modules/nuxt/dist/app/entry.js": {
+  "/Users/alexbeje/Code/bejepics/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "/Users/alexandrubejenaru/Code/bejepics/node_modules/nuxt/dist/app/entry.js"
+    "file": "/Users/alexbeje/Code/bejepics/node_modules/nuxt/dist/app/entry.js"
   }
 }
