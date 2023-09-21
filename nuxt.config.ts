@@ -1,12 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  colorMode: {
-    classSuffix: "",
-  },
   elementPlus: {
-    icon: "ElIcon",
     importStyle: "scss",
-    themes: ["dark"],
   },
   modules: [
     "@nuxtjs/tailwindcss",
@@ -17,13 +12,6 @@ export default defineNuxtConfig({
   ],
   pinia: {
     autoImports: ["defineStore", "storeToRefs"],
-  },
-  unocss: {
-    uno: true,
-    attributify: true,
-    icons: {
-      scale: 1.2,
-    },
   },
   vite: {
     css: {
