@@ -65,6 +65,9 @@
       "pinia": [
         "node_modules/pinia/dist/pinia"
       ],
+      "#color-mode-options": [
+        ".nuxt/color-mode-options"
+      ],
       "#vue-router": [
         ".nuxt/vue-router"
       ],
@@ -89,5 +92,6 @@
   "exclude": [
     "../dist",
     "../.output"
-  ]
+  ],
+  "extends": "../../../tsconfig.base.json"
 }
