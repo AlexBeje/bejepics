@@ -1,24 +1,9 @@
-$-colors: (
-  "primary": (
-    "base": rgba(107, 33, 168, 1),
-  ),
-  "success": (
-    "base": #67c23a,
-  ),
-  "warning": (
-    "base": #e6a23c,
-  ),
-  "danger": (
-    "base": #f56c6c,
-  ),
-  "error": (
-    "base": #f56c6c,
-  ),
-  "info": (
-    "base": #909399,
-  ),
-);
+@use "./base/colors";
+@use "./components/el-header";
+@use "./components/el-footer";
 
 @forward "element-plus/theme-chalk/src/common/var.scss" with (
-  $colors: $-colors
+  $colors: colors.$colors,
+  $header: el-header.$header,
+  $footer: el-footer.$footer
 );
